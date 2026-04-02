@@ -1,39 +1,44 @@
 .sidebar {
   position: fixed;
   top: 0; left: 0;
-  width: 240px;
+  width: 250px;
   height: 100vh;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   z-index: 100;
   overflow-y: auto;
+  box-shadow: 1px 0 10px rgba(15, 23, 42, 0.02);
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 20px 20px 16px;
+  gap: 12px;
+  padding: 24px 20px 20px;
   border-bottom: 1px solid var(--border-light);
 }
 
 .brandIcon {
-  width: 36px;
-  height: 36px;
-  background: var(--blue);
+  width: 38px;
+  height: 38px;
+  background: var(--blue-grad);
   color: white;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .brandName {
-  font-size: 13.5px;
-  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
@@ -54,37 +59,39 @@
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  font-weight: 500;
-  padding: 4px 10px;
+  font-weight: 600;
+  padding: 5px 12px;
   border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02) inset;
 }
 
-.statusBadgeOn  { background: var(--green-light); color: var(--green); }
-.statusBadgeOff { background: var(--surface-2);   color: var(--text-muted); }
+.statusBadgeOn  { background: var(--green-light); color: var(--green); border: 1px solid rgba(16, 185, 129, 0.2); }
+.statusBadgeOff { background: var(--surface-2);   color: var(--text-muted); border: 1px solid var(--border); }
 
 .dotOn, .dotOff {
   width: 6px; height: 6px;
   border-radius: 50%;
   flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
 }
-.dotOn  { background: var(--green); }
-.dotOff { background: var(--text-muted); }
+.dotOn  { background: var(--green); color: var(--green); }
+.dotOff { background: var(--text-muted); color: transparent; box-shadow: none; }
 
 .nav {
   flex: 1;
-  padding: 8px 12px;
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .navItem {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
-  padding: 9px 12px;
+  padding: 10px 14px;
   border: none;
   background: transparent;
   border-radius: var(--radius-sm);
@@ -93,18 +100,21 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: left;
 }
 
 .navItem:hover:not(.disabled):not(.active) {
   background: var(--surface-2);
   color: var(--text-primary);
+  transform: translateX(2px);
 }
 
 .navItem.active {
   background: var(--blue-light);
-  color: var(--blue);
+  color: var(--blue-dark);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.05);
 }
 
 .navItem.disabled {
@@ -114,6 +124,7 @@
 
 .navIcon {
   flex-shrink: 0;
+  color: inherit;
 }
 
 .activeBar {
