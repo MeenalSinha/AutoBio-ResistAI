@@ -1,0 +1,17 @@
+{
+  "champion_model": "XGBoost",
+  "f1_score": 0.9827,
+  "roc_auc": 0.9985,
+  "pr_auc": 0.959,
+  "recall_resistant": 0.9418,
+  "cv_f1_mean": 0.9829,
+  "cv_f1_std": 0.0012,
+  "class_names": [
+    "Intermediate",
+    "Resistant",
+    "Susceptible"
+  ],
+  "n_features": 32,
+  "dataset_samples": 10710,
+  "data_source": "Kaggle: Bacteria_dataset_Multiresictance.csv"
+}

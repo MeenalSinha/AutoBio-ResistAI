@@ -1,0 +1,23 @@
+.alert {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.icon { flex-shrink: 0; margin-top: 1px; }
+
+.title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.body { color: inherit; opacity: 0.85; }
+
+.error   { background: var(--red-light);   color: var(--red);   border-color: #fca5a5; }
+.success { background: var(--green-light); color: var(--green); border-color: #6ee7b7; }
+.info    { background: var(--blue-light);  color: var(--blue);  border-color: #bfdbfe; }
+.warning { background: var(--amber-light); color: var(--amber); border-color: #fcd34d; }

@@ -1,0 +1,184 @@
+.page {
+  padding: 36px 40px;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border: 1px solid;
+  border-radius: var(--radius-lg);
+}
+
+.bannerContent { flex: 1; }
+
+.bannerTitle {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.bannerUrgency {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.bannerConf {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.confNum {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.confLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.notesCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Drug sections */
+.drugSection { margin-bottom: 18px; }
+.drugSection:last-child { margin-bottom: 0; }
+
+.drugSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.greenIcon { color: var(--green); }
+.blueIcon  { color: var(--blue); }
+.redIcon   { color: var(--red); }
+.amberIcon { color: var(--amber); }
+
+.drugList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.drugTag {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+}
+
+.drugTag_green { background: var(--green-light); color: var(--green); }
+.drugTag_blue  { background: var(--blue-light);  color: var(--blue-dark); }
+.drugTag_red   { background: var(--red-light);   color: var(--red); }
+.drugTag_amber { background: var(--amber-light); color: var(--amber); }
+
+/* Notes */
+.noteList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.noteItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.noteArrow { color: var(--blue); flex-shrink: 0; margin-top: 3px; }
+
+/* Stewardship */
+.stewardship {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Mechanisms */
+.mechList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mechItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--amber);
+}
+
+.mechDot {
+  width: 8px; height: 8px;
+  background: var(--amber);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.mechItem p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Genes */
+.geneList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.geneChip {
+  font-family: 'DM Mono', monospace;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  background: #f0fdf4;
+  color: var(--green);
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+  .page { padding: 20px 16px; }
+}

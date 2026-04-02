@@ -1,0 +1,301 @@
+.page {
+  padding: 36px 40px;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Sections */
+.section { margin-bottom: 20px; }
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Number fields */
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {}
+
+.fieldLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.numInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.numBtn {
+  width: 32px; height: 36px;
+  border: none;
+  background: var(--surface-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.numBtn:hover { background: var(--border); }
+
+.numVal {
+  flex: 1;
+  border: none;
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 0 4px;
+  outline: none;
+  width: 0;
+}
+
+/* Gene toggles */
+.genes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.geneToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color 0.15s, background 0.15s;
+}
+.geneToggle:has(input:checked) {
+  border-color: var(--red);
+  background: var(--red-light);
+}
+.geneToggle input { display: none; }
+
+.geneCheck {
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s;
+}
+.geneChecked { border-color: var(--red); color: var(--red); }
+
+.geneName { font-size: 12.5px; font-weight: 500; color: var(--text-primary); }
+
+.predictBtn { width: 100%; margin-top: 8px; }
+
+.mt { margin-top: 12px; }
+
+/* Radar note */
+.radarNote {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Result banner */
+.resultBanner {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px 24px;
+  border: 1px solid;
+  border-radius: var(--radius-lg);
+}
+
+.resultLabel {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.resultConf {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.probRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 280px;
+}
+
+.probItem { display: flex; align-items: center; gap: 10px; }
+
+.probLabel { font-size: 12.5px; font-weight: 600; width: 100px; flex-shrink: 0; color: var(--text-primary); }
+
+.probBar {
+  flex: 1;
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.probFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.probPct {
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  color: var(--text-secondary);
+  width: 40px;
+  text-align: right;
+}
+
+/* SHAP */
+.shapList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shapRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shapFeature {
+  width: 160px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shapBarWrap {
+  flex: 1;
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.shapBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s;
+}
+
+.shapVal {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  width: 60px;
+  text-align: right;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.shapDir {
+  font-size: 11px;
+  color: var(--text-muted);
+  width: 150px;
+  flex-shrink: 0;
+}
+
+/* Treatment preview */
+.treatRow {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.treatLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.drugList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.drugTag {
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 4px 10px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  border-radius: 20px;
+}
+
+.drugTagRed {
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 4px 10px;
+  background: var(--red-light);
+  color: var(--red);
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .fields { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .page { padding: 20px 16px; }
+  .shapFeature { width: 100px; }
+  .shapDir { display: none; }
+}

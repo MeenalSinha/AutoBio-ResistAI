@@ -1,0 +1,21 @@
+species,sample_source,mic_ampicillin,mic_tetracycline,mic_ciprofloxacin,mic_gentamicin,gene_blaTEM,gene_mecA,gene_vanA,gene_qnrS,gene_armA,resistance_outcome
+E. coli,Blood,32.0,8.0,0.5,1.0,1,0,0,0,0,Resistant
+K. pneumoniae,Urine,4.0,2.0,0.25,1.0,0,0,0,0,0,Susceptible
+S. aureus,Wound,2.0,1.0,0.125,0.5,0,1,0,0,0,Resistant
+P. aeruginosa,Respiratory,16.0,8.0,2.0,4.0,0,0,0,1,0,Intermediate
+A. baumannii,Blood,64.0,32.0,16.0,16.0,1,0,0,1,1,Resistant
+E. coli,Urine,1.0,1.0,0.125,0.5,0,0,0,0,0,Susceptible
+K. pneumoniae,Blood,8.0,4.0,1.0,2.0,1,0,0,0,0,Intermediate
+S. aureus,CSF,4.0,2.0,0.25,1.0,0,0,0,0,0,Susceptible
+E. coli,Wound,16.0,8.0,4.0,8.0,1,0,0,1,0,Resistant
+P. aeruginosa,Blood,32.0,16.0,8.0,16.0,0,0,0,0,1,Resistant
+E. coli,Urine,2.0,1.0,0.25,0.5,0,0,0,0,0,Susceptible
+K. pneumoniae,Respiratory,4.0,2.0,0.5,1.0,0,0,0,0,0,Susceptible
+S. aureus,Blood,8.0,4.0,1.0,2.0,0,1,0,0,0,Resistant
+A. baumannii,Wound,32.0,16.0,8.0,8.0,1,0,0,0,1,Resistant
+E. coli,Blood,1.0,1.0,0.125,0.5,0,0,0,0,0,Susceptible
+K. pneumoniae,CSF,2.0,1.0,0.25,0.5,0,0,0,0,0,Susceptible
+S. aureus,Urine,16.0,8.0,2.0,4.0,0,1,0,0,0,Resistant
+P. aeruginosa,Wound,8.0,4.0,2.0,4.0,0,0,0,1,0,Intermediate
+E. coli,Respiratory,4.0,2.0,0.5,1.0,1,0,0,0,0,Intermediate
+K. pneumoniae,Blood,64.0,32.0,16.0,32.0,1,0,0,1,1,Resistant
