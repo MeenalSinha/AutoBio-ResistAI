@@ -56,14 +56,14 @@ User submits features  ->  DataProcessor.encode_single_sample()
 
 | Method | Endpoint           | Description                        |
 |--------|--------------------|------------------------------------|
-| GET    | /health            | API health + training status       |
-| POST   | /upload            | Upload dataset file                |
-| POST   | /train             | Run AutoBio Engine                 |
+| GET    | /health            | AI system health + training status       |
+| POST   | /upload            | Upload real CSV/Excel dataset      |
+| POST   | /train             | Run Automated ML Engine            |
 | GET    | /explain/global    | Global SHAP feature importance     |
-| POST   | /predict           | Single-sample prediction           |
-| POST   | /predict/batch     | Batch CSV prediction               |
-| GET    | /sample-data       | Synthetic dataset preview          |
-| GET    | /models/info       | Model state + comparison           |
+| POST   | /predict           | AI-assisted resistance prediction   |
+| POST   | /predict/batch     | Batch CSV resistance prediction    |
+| GET    | /sample-data       | Real AMR dataset sample preview     |
+| GET    | /models/info       | AI model state + comparison         |
 
 ---
 
@@ -73,7 +73,13 @@ User submits features  ->  DataProcessor.encode_single_sample()
 |---------------------|--------------|---------------------------------------------|
 | Logistic Regression | scikit-learn | C=1.0, max_iter=1000, lbfgs                 |
 | Random Forest       | scikit-learn | n_estimators=200, max_depth=10              |
-| XGBoost             | xgboost      | n_estimators=200, max_depth=6, lr=0.1       |
+| XGBoost (Optimized) | xgboost      | n_estimators, max_depth, lr (Bayesian)     |
+
+### Bayesian Optimization (Optuna)
+AutoBio-ResistAI leverages **Optuna** to execute a Bayesian search across the hyperparameter space for the XGBoost champion model. 
+- Objective function: Maximise Weighted F1 score using 5-fold Stratified K-Fold cross-validation.
+- Parameter space: `n_estimators`, `max_depth`, `learning_rate`, `subsample`, and `colsample_bytree`.
+- Persistence: Optimized model weights and hyperparameters are persisted via `joblib` for zero-latency inference after restart.
 
 Selection criterion: Weighted F1 Score on hold-out test set (20% stratified split).
 Cross-validation: 5-fold StratifiedKFold.
