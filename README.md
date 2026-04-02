@@ -1,6 +1,6 @@
-# AutoBio-ResistAI: Self-Optimizing Antibiotic Resistance Prediction
+# AutoBio-ResistAI: Automated ML System for Antibiotic Resistance Prediction
 
-A fully autonomous, scalable, and explainable Machine Learning clinical decision support system designed to predict and navigate the growing crisis of Antimicrobial Resistance (AMR). 
+An automated ML system designed to predict and navigate the growing crisis of Antimicrobial Resistance (AMR). 
 
 🏆 **Hackathon Benchmark Performance:** F1 = 0.9827 | ROC-AUC = 0.9985 | Trained against 10,710 real clinical isolates.
 
@@ -14,8 +14,8 @@ A fully autonomous, scalable, and explainable Machine Learning clinical decision
 ## 2. Key Features
 - **AutoBio Engine:** A self-optimizing AutoML framework. It tests Logistic Regression, Random Forests, and leverages **Optuna Bayesian Hyperparameter Optimization** to dynamically benchmark and select the ultimate Champion model (XGBoost).
 - **Explainable AI (SHAP):** Black-box predictions are demystified. Interactive SHAP analytics display the exact genotypic and phenotypic factors driving a Resistance determination.
-- **Resistance Gene Networks:** Meets advanced hackathon criteria by rendering an organic NetworkX-based co-occurrence map, proving Spearman correlation between gene expression (e.g. `gene_mecA`) and MIC outcome behavior.
-- **Targeted Treatment Recommender:** Fuses heuristic resistance flag checks with dynamic localized LLM evaluation to generate clinical prescribing guidelines (drugs to isolate, drugs to prescribe).
+- **Resistance Gene Networks:** Meets advanced hackathon criteria by rendering an organic NetworkX-based co-occurrence map, proving Spearman correlation between engineered resistance features (e.g. `gene_mecA`) and MIC outcome behavior.
+- **Targeted Treatment Recommender:** Fuses heuristic resistance flag checks with AI-assisted clinical interpretation logic to generate clinical prescribing guidelines (drugs to isolate, drugs to prescribe).
 - **Full-Stack Turnkey App:** FastAPI Backend married to a dynamic React Front-End. Completely Dockerized for friction-free mission deployment.
 
 ## 3. Tech Stack
